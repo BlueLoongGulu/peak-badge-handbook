@@ -45,6 +45,16 @@
 
 ---
 
+## 问题反馈
+
+如遇此模组的 Bug 等问题，请在 GitHub 的 Issue 提交你的问题：
+https://github.com/BlueLoongGulu/peak-badge-handbook/issues
+
+或到 Bilibili 站点私信我（蓝龙咕噜）：
+https://space.bilibili.com/86295309
+
+---
+
 ## 开源
 
 MIT License — 源码见 GitHub 仓库。
@@ -97,6 +107,13 @@ Font too small? Open the mod's `.cfg` file in the config folder and adjust `UiSc
 ## Compatibility
 
 This is a read-only UI mod: it does not modify unlocking, cosmetics, saves, or achievement progress.
+
+---
+
+## Feedback / Bug Reports
+
+Found a bug or have a suggestion? Please open an issue on GitHub:
+https://github.com/BlueLoongGulu/peak-badge-handbook/issues
 
 ---
 
