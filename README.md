@@ -1,4 +1,4 @@
-﻿# Peak Badge Handbook
+# Peak Badge Handbook
 
 A PEAK mod that lets you freely browse badge unlock conditions.
 
