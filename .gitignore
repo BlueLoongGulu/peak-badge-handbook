@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+# 发布包资产（游戏提取素材），不进源码仓库
+Textures/
+*.dll
+*.pdb
+README.txt
