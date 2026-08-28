@@ -42,7 +42,7 @@
 
 ## 开源
 
-MIT License — 源码见 GitHub。
+MIT License — 源码见 GitHub：https://github.com/BlueLoongGulu/peak-badge-handbook
 
 ---
 
@@ -92,4 +92,4 @@ This is a read-only UI mod: it does not modify unlocking, cosmetics, saves, or a
 
 ## Open Source
 
-MIT License — source code on GitHub.
+MIT License — source code on GitHub: https://github.com/BlueLoongGulu/peak-badge-handbook

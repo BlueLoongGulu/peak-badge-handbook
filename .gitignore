@@ -8,3 +8,6 @@ Textures/
 *.dll
 *.pdb
 README.txt
+
+# 发布包 zip（重新打包时会更新）
+*.zip
