@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>peak-badge-handbook</AssemblyName>
     <RootNamespace>PeakBadgeHandbook</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -35,35 +35,13 @@
       <Private>false</Private>
     </Reference>
 
-    <!-- Customization/AchievementManager inherit Singleton<> from Zorro.Core -->
+    <!-- Customization/AchievementManager inherit Singleton<> from Zorro.Core (compiler REQUIRES this ref) -->
     <Reference Include="Zorro.Core.Runtime">
       <HintPath>$(ManagedDir)/Zorro.Core.Runtime.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>$(ManagedDir)/Sirenix.Serialization.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>$(ManagedDir)/Sirenix.OdinInspector.Attributes.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
     <Reference Include="Zorro.Settings.Runtime">
       <HintPath>$(ManagedDir)/Zorro.Settings.Runtime.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-
-    <!-- photon is pulled in by the game's item networking -->
-    <Reference Include="PhotonUnityNetworking">
-      <HintPath>$(ManagedDir)/PhotonUnityNetworking.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="PhotonRealtime">
-      <HintPath>$(ManagedDir)/PhotonRealtime.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>$(ManagedDir)/Photon3Unity3D.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
@@ -74,10 +52,6 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(ManagedDir)/UnityEngine.CoreModule.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>$(ManagedDir)/UnityEngine.IMGUIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">

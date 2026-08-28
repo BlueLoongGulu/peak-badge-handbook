@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using BepInEx.Logging;
@@ -278,15 +278,6 @@ namespace PeakBadgeHandbook
             return option != null && !option.IsLocked;
         }
 
-        // 通道图（眼睛/嘴巴）转白色蒙版：非透明像素染白，保留 alpha —— 与游戏内显示一致
-        public static Texture2D GetPreviewTexture(string slot, string file)
-        {
-            if (string.IsNullOrEmpty(file)) return null;
-            if ((slot == "eyes" || slot == "mouths") && Textures.TryGetValue("white_" + file, out var white))
-                return white;
-            return GetTexture(file);
-        }
-
         public static string UnlockText(CosmeticEntry c)
         {
             if (c == null) return "";
@@ -316,25 +307,7 @@ namespace PeakBadgeHandbook
             return string.Join("\n", parts);
         }
 
-        public static string BadgeNameFor(string achievementType) => Translations.BadgeName(achievementType);
-        public static string BadgeDescFor(string achievementType) => Translations.BadgeDesc(achievementType);
 
-        // Customization.Type 枚举值 -> 部位名
-        public static string SlotFromType(int typeValue)
-        {
-            switch (typeValue)
-            {
-                case 0: return "skins";
-                case 10: return "accessories";
-                case 20: return "eyes";
-                case 30: return "mouths";
-                case 40: return "fits";
-                case 50: return "hats";
-                case 60: return "sashes";
-                case 70: return "medals";
-                default: return null;
-            }
-        }
 
         private static bool HasAnyIcon(List<BadgeEntry> list)
         {
@@ -372,25 +345,6 @@ namespace PeakBadgeHandbook
             var t2d = new Texture2D(2, 2, TextureFormat.RGBA32, false);
             if (!t2d.LoadImage(bytes)) return;
             Textures[key] = t2d;
-
-            // 通道图（眼睛/嘴巴）额外生成白色蒙版：非透明像素染白，保留 alpha
-            if (key.StartsWith("eyes_") || key.StartsWith("mouths_"))
-            {
-                try
-                {
-                    var pixels = t2d.GetPixels32();
-                    for (int i = 0; i < pixels.Length; i++)
-                    {
-                        if (pixels[i].a > 10) pixels[i] = new Color32(255, 255, 255, pixels[i].a);
-                        else pixels[i] = new Color32(0, 0, 0, 0);
-                    }
-                    var white = new Texture2D(t2d.width, t2d.height, TextureFormat.RGBA32, false);
-                    white.SetPixels32(pixels);
-                    white.Apply();
-                    Textures["white_" + key] = white;
-                }
-                catch { }
-            }
         }
     }
 }
