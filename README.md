@@ -5,6 +5,11 @@
 有些想要的服饰或装饰不知如何解锁？在徽章手册中可以找到对应解锁条件！
 徽章手册同时记录了您已解锁/未解锁的服饰，更方便查看您的收集进度。
 
+![screenshot-1](assets/screenshots/screenshot-1-en-fits-detail.png)
+![screenshot-2](assets/screenshots/screenshot-2-en-badges.png)
+![screenshot-3](assets/screenshots/screenshot-3-zh-hats.png)
+![screenshot-4](assets/screenshots/screenshot-4-zh-badges.png)
+
 ---
 
 ## 安装
@@ -42,7 +47,7 @@
 
 ## 开源
 
-MIT License — 源码见 GitHub：https://github.com/BlueLoongGulu/peak-badge-handbook
+MIT License — 源码见 GitHub 仓库。
 
 ---
 
@@ -54,6 +59,11 @@ A PEAK mod that lets you freely browse badge unlock conditions.
 
 Want to know how to unlock that outfit or accessory? Find the answer in the Badge Handbook!
 It also shows which cosmetics are unlocked (and which are not), so you can track your collection progress.
+
+![screenshot-1](assets/screenshots/screenshot-1-en-fits-detail.png)
+![screenshot-2](assets/screenshots/screenshot-2-en-badges.png)
+![screenshot-3](assets/screenshots/screenshot-3-zh-hats.png)
+![screenshot-4](assets/screenshots/screenshot-4-zh-badges.png)
 
 ---
 
@@ -92,4 +102,4 @@ This is a read-only UI mod: it does not modify unlocking, cosmetics, saves, or a
 
 ## Open Source
 
-MIT License — source code on GitHub: https://github.com/BlueLoongGulu/peak-badge-handbook
+MIT License — source code on GitHub.
