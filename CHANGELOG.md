@@ -6,11 +6,11 @@
 
 ### 中文
 
-- 清理更新说明中的维护格式提示文字
+- 无修复改动：仅修改部分注释内容，与 v1.0.1 功能一致
 
 ### English
 
-- Removed maintainer formatting note from changelog
+- No functional changes: only comment/documentation cleanup. Functionally identical to v1.0.1.
 
 ---
 
