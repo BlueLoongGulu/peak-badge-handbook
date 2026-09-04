@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 
 namespace PeakBadgeHandbook
 {
-    [BepInPlugin("peak-badge-handbook", "Peak Badge Handbook", "1.0.0")]
+    [BepInPlugin("peak-badge-handbook", "Peak Badge Handbook", "1.0.1")]
     public class Plugin : BaseUnityPlugin
     {
         internal static Plugin Instance;
@@ -47,7 +47,7 @@ namespace PeakBadgeHandbook
             _harmony = new Harmony("peak.badgehandbook.ui");
             _harmony.PatchAll();
 
-            Logger.LogInfo("[BadgeHandbook] v1.0.0 已加载。按 " + _toggleKey.Value + " 打开徽章手册");
+            Logger.LogInfo("[BadgeHandbook] v1.0.1 已加载。按 " + _toggleKey.Value + " 打开徽章手册");
         }
 
         private void Update()

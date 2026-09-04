@@ -4,6 +4,20 @@ Version history: Chinese first, then English for each release.
 
 ---
 
+## v1.0.1
+
+### 中文
+
+- 适配游戏 2.4.b 更新：修复游戏更新后模组无法加载的问题（F6 无响应）
+- 跟随游戏新版本调整语言检测逻辑（本地化数据版本更新为 2.4.b）
+
+### English
+
+- Compatible with game update 2.4.b: fixed mod failing to load after the game update (F6 unresponsive)
+- Adjusted language detection for the new game version (localization data version updated to 2.4.b)
+
+---
+
 ## v1.0.0
 
 ### 中文

@@ -18,7 +18,7 @@ namespace PeakBadgeHandbook
         // 标题显示的是“本手册数据基于哪个版本”，而不是“当前游戏版本”，
         // 避免游戏已更新但模组没更新时误导玩家。
         // ==============================
-        public const string DataVersion = "2.03.a";
+        public const string DataVersion = "2.4.b";
 
         // 当前语言：由 Localization 在启动时根据游戏界面语言设置。
         // zh-CN = 简体中文，en = English

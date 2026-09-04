@@ -1,6 +1,6 @@
 {
   "name": "Peak_Badge_Handbook",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/BlueLoongGulu/peak-badge-handbook",
   "description": "Badge handbook UI (F6) to browse badge unlock conditions and cosmetic unlock status in PEAK. Chinese & English.",
   "dependencies": [

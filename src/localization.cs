@@ -23,13 +23,17 @@ namespace PeakBadgeHandbook
         {
             try
             {
+                // 游戏 2.4.b 更新：LanguageSetting.Language 嵌套枚举已被移除，
+                // 语言全局状态改用 LocalizedText.CURRENT_LANGUAGE（public static Language 字段）。
+                // ⚠️ 插件 Awake 早期游戏设置系统可能尚未加载（SettingsHandler.Instance == null），
+                // 此时 LocalizedText.CURRENT_LANGUAGE 还是默认值（English），直接读会误判语言，
+                // 导致中文界面玩家走英文预热路径、中文字形没预生成 → F6 首次打开卡顿（交付文档 7.12）。
+                // 因此仅在 SettingsHandler 就绪时才信任 CURRENT_LANGUAGE，否则按系统语言兜底。
                 var settings = SettingsHandler.Instance;
                 if (settings != null)
                 {
-                    var languageSetting = settings.GetSetting<LanguageSetting>();
-                    var lang = languageSetting.Value;
-                    if (lang == LanguageSetting.Language.SimplifiedChinese ||
-                        lang == LanguageSetting.Language.TraditionalChinese)
+                    var lang = LocalizedText.CURRENT_LANGUAGE;
+                    if (lang == LocalizedText.Language.SimplifiedChinese || lang == LocalizedText.Language.TraditionalChinese)
                     {
                         Translations.CurrentLanguage = "zh-CN";
                     }
@@ -37,6 +41,15 @@ namespace PeakBadgeHandbook
                     {
                         Translations.CurrentLanguage = "en";
                     }
+                }
+                else
+                {
+                    // 游戏设置系统未加载（插件 Awake 早期）：按系统语言兜底
+                    if (Application.systemLanguage == SystemLanguage.ChineseSimplified ||
+                        Application.systemLanguage == SystemLanguage.ChineseTraditional)
+                        Translations.CurrentLanguage = "zh-CN";
+                    else
+                        Translations.CurrentLanguage = "en";
                 }
             }
             catch

@@ -51,12 +51,19 @@ namespace PeakBadgeHandbook
 
         // ============ UI 预热（减少首次 F6 打开/首次翻页卡顿） ============
         private static bool _hiddenPrewarmDone;
+        private static string _hiddenPrewarmLanguage;
 
         public static bool HiddenPrewarmDone => _hiddenPrewarmDone;
 
         // 隐藏完整预热：等中文字体就绪后，隐藏生成所有手册文本，避免首次 F6/翻页卡顿。
         public static void PrewarmHiddenUI()
         {
+            // 语言可能因启动早期检测不准而后期修正（如 SettingsHandler 就绪后从 en 改回 zh-CN），
+            // 检测到语言变化时重置预热标志，让预热按新语言重新跑一遍（delivery doc 7.12 保护）。
+            if (_hiddenPrewarmDone && _hiddenPrewarmLanguage != Translations.CurrentLanguage)
+            {
+                _hiddenPrewarmDone = false;
+            }
             if (_hiddenPrewarmDone) return;
 
             // 语言通用等待逻辑：当前语言对应的字体未就绪就下一帧再试。
@@ -97,6 +104,7 @@ namespace PeakBadgeHandbook
 
                 UnityEngine.Object.Destroy(canvasGo);
                 _hiddenPrewarmDone = true;
+                _hiddenPrewarmLanguage = Translations.CurrentLanguage;
             }
             catch
             {
