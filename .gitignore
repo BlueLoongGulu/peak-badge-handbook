@@ -11,3 +11,6 @@ README.txt
 
 # 发布包 zip（重新打包时会更新）
 *.zip
+
+# 发布图标（商店 package icon，随发布包分发，不进源码仓库）
+icon.png
