@@ -1,6 +1,16 @@
 # Changelog
 
-Version history: Chinese first, then English for each release.
+---
+
+## v1.0.2
+
+### 中文
+
+- 清理更新说明中的维护格式提示文字
+
+### English
+
+- Removed maintainer formatting note from changelog
 
 ---
 
